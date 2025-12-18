@@ -1,2 +1,26 @@
+
 # PCNet
-PCNet
+# Personalized Complementary Network for Personalized High-order Complementary Service Recommendation
+⭐ This code has been released for reproducibility ⭐
+
+⭐ Overall framework of the PCNet model ⭐
+
+
+
+Overall framework of the PCNet model.
+
+⭐ The HGA dataset refers to our previous work: https://github.com/528Lab/CAData ⭐  
+⭐ The PWA dataset refers to: https://github.com/kkfletch/API-Dataset ⭐
+
+---
+
+## Environment
+
+- **Python**: 3.9.16  
+- **PyTorch**: 2.0.1  
+- **Transformers**: 4.3x.x  
+- Common dependencies: `numpy`, `scipy`, `pandas`, `scikit-learn`, `tqdm`
+
+(Optional) Install dependencies:
+```bash
+pip install -r requirements.txt
