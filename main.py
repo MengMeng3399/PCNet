@@ -165,7 +165,7 @@ def setup_seed(seed):
     torch.backends.cudnn.deterministic = True    
 
 learningRate = 0.0003   #
-batchSize = 128
+batchSize = 256
 device = torch.device('cuda')
 weightDecay = 0.001
 epochs = 30
