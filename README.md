@@ -26,7 +26,7 @@ Overall framework of the PCNet model.
 We extract textual embeddings for Mashups/APIs using `bert_embedder.py` (HuggingFace `AutoTokenizer` / `AutoModel`).
 - Default model: `bert-base-uncased.` 
 - Tokenization: padding + truncation with `--max-length 128`.
-- Representation: `--layer last` (or `last4_mean`).
+- Representation: `--layer last`.
 - Pooling: `--pooling mean` (masked mean pooling) or `cls`; `--exclude-special-tokens` is optional.
 - Empty text: outputs a zero vector (`--on-empty zero`).
 - Outputs: `bert_mashup_des.json` and `bert_api_des.json` (key -> embedding list).
