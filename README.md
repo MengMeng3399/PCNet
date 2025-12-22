@@ -24,3 +24,15 @@ Overall framework of the PCNet model.
 (Optional) Install dependencies:
 ```bash
 pip install -r requirements.txt
+
+
+
+python bert_embedder.py \
+  --mashup-json data/mashup.json \
+  --api-json data/api.json \
+  --model-name bert-base-uncased \
+  --layer last \
+  --pooling mean \
+  --max-length 128 \
+  --batch-size 64 \
+  --seed 42
