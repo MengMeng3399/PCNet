@@ -43,8 +43,6 @@ python bert_embedder.py \
   --batch-size 64 \
   --seed 42
 
-  --seed 42
-
 
  
 ### Random Seed (Sample Generation & Training)
