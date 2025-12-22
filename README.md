@@ -22,6 +22,17 @@ Overall framework of the PCNet model.
 - Common dependencies: `numpy`, `scipy`, `pandas`, `scikit-learn`, `tqdm`
 
 
+### BERT Embeddings
+We extract textual embeddings for Mashups/APIs using `bert_embedder.py` (HuggingFace `AutoTokenizer` / `AutoModel`).
+- Default model: `bert-base-uncased.` 
+- Tokenization: padding + truncation with `--max-length 128`.
+- Representation: `--layer last` (or `last4_mean`).
+- Pooling: `--pooling mean` (masked mean pooling) or `cls`; `--exclude-special-tokens` is optional.
+- Empty text: outputs a zero vector (`--on-empty zero`).
+- Outputs: `bert_mashup_des.json` and `bert_api_des.json` (key -> embedding list).
+
+Example:
+```bash
 python bert_embedder.py \
   --mashup-json data/mashup.json \
   --api-json data/api.json \
@@ -30,4 +41,6 @@ python bert_embedder.py \
   --pooling mean \
   --max-length 128 \
   --batch-size 64 \
+  --seed 42
+
   --seed 42
