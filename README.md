@@ -21,11 +21,6 @@ Overall framework of the PCNet model.
 - **Transformers**: 4.3x.x  
 - Common dependencies: `numpy`, `scipy`, `pandas`, `scikit-learn`, `tqdm`
 
-(Optional) Install dependencies:
-```bash
-pip install -r requirements.txt
-
-
 
 python bert_embedder.py \
   --mashup-json data/mashup.json \
