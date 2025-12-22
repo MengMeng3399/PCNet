@@ -14,7 +14,7 @@ Overall framework of the PCNet model.
 
 ---
 
-## Environment
+### Environment
 
 - **Python**: 3.9.16  
 - **PyTorch**: 2.0.1  
@@ -44,3 +44,13 @@ python bert_embedder.py \
   --seed 42
 
   --seed 42
+
+
+ 
+### Random Seed (Sample Generation & Training)
+
+-To facilitate fair comparison, we fix the random seed in the released code:
+
+- Sample generation / data split: random_state=2024.
+
+- Training: setup_seed(3088) (sets Python/NumPy/PyTorch seeds and enables deterministic cuDNN).
