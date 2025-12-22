@@ -253,7 +253,7 @@ with open(API_DES_PATH, 'r') as fd:
 
 data,featPosDict, maxTargetAPINum = dcr_preprocess(dataPath,vec_mashup_des,vec_api_des,featDict=featDict, featType_enabled=featType_enabled)    
 
-seed = 2023528
+seed = 2024
 testSize = 0.2
 train, test = train_test_split(data, test_size=testSize, random_state=seed)
 train_x = train[:,:-1]
