@@ -46,5 +46,5 @@ python bert_embedder.py \
 
 ### Random Seed (Sample Generation & Training)
 To facilitate fair comparison, we fix the random seed in the released code:
-- Sample generation / data split: `random_state=2024`.
-- Training: `setup_seed(3088)` (sets Python/NumPy/PyTorch seeds and enables deterministic cuDNN).
+- Sample generation / data split: `seed=2024`.
+- Training: `seed=3088` (sets Python/NumPy/PyTorch seeds and enables deterministic cuDNN).
