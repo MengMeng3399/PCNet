@@ -5,7 +5,7 @@
 
 ⭐ Overall framework of the PCNet model ⭐
 
-
+<img width="3756" height="2000" alt="framework" src="https://github.com/user-attachments/assets/7070e7ad-9ec0-4b4e-b1d8-960185bf9406" />
 
 Overall framework of the PCNet model.
 
