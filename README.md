@@ -27,7 +27,8 @@ We extract textual embeddings for Mashups/APIs using `bert_embedder.py` (Hugging
 - Default model: `bert-base-uncased.` 
 - Tokenization: padding + truncation with `--max-length 128`.
 - Representation: `--layer last`.
-- Pooling: `--pooling mean` (masked mean pooling) or `cls`; `--exclude-special-tokens` is optional.
+- Pooling: `--pooling mean` (masked mean pooling over non-padding tokens using the attention mask); `--exclude-special-tokens` is optional to exclude `[CLS]/[SEP]` from mean pooling.
+- BERT is used in inference mode (without fine-tuning) for embedding extraction.
 - Empty text: outputs a zero vector (`--on-empty zero`).
 - Outputs: `bert_mashup_des.json` and `bert_api_des.json` (key -> embedding list).
 
@@ -42,6 +43,7 @@ python bert_embedder.py \
   --max-length 128 \
   --batch-size 64 \
   --seed 42
+  --on-empty zero
 ```
 
 ### Random Seed (Sample Generation & Training)
